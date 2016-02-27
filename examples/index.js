@@ -14,7 +14,7 @@ for ( i = 0; i < x.length; i++ ) {
 	x[ i ] = round( Math.random()*1e5 );
 }
 
-// Convert unsigned integers to literal bit representations...
+// Convert unsigned 32-bit integers to literal bit representations...
 for ( i = 0; i < x.length; i++ ) {
 	b = bits( x[i] );
 	y = parseInt( b, 2 );
