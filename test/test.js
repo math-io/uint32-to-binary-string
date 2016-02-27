@@ -3,6 +3,7 @@
 // MODULES //
 
 var tape = require( 'tape' );
+var MAX_UINT32 = require( 'const-max-uint32' );
 var bits = require( './../lib' );
 
 
@@ -17,6 +18,24 @@ var large = require( './fixtures/large.json' );
 
 tape( 'main export is a function', function test( t ) {
 	t.equal( typeof bits, 'function', 'main export is a function' );
+	t.end();
+});
+
+tape( 'the function returns a literal 32-bit unsigned integer representation for 0', function test( t ) {
+	var expected;
+
+	expected = '00000000000000000000000000000000';
+
+	t.equal( bits(0), expected, 'returns bit literal for 0' );
+	t.end();
+});
+
+tape( 'the function returns a literal 32-bit unsigned integer representation for MAX_UINT32', function test( t ) {
+	var expected;
+
+	expected = '11111111111111111111111111111111';
+
+	t.equal( bits(MAX_UINT32), expected, 'returns bit literal for MAX_UINT32' );
 	t.end();
 });
 

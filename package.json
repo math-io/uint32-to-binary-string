@@ -57,6 +57,7 @@
   "devDependencies": {
     "browserify": "13.x.x",
     "codecov": "1.x.x",
+    "const-max-uint32": "^1.0.2",
     "istanbul": "^0.4.1",
     "jshint": "2.x.x",
     "jshint-stylish": "2.x.x",
