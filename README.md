@@ -41,7 +41,6 @@ str = bits( a[2] );
 * 	Except for [typed arrays][typed-arrays], JavaScript does __not__ provide native user support for [unsigned 32-bit integers][integer].
 *	According to the [ECMAScript standard][ecma-262], `number` values correspond to [double-precision floating-point numbers][ieee754].
 * 	While this `function` is intended for [unsigned 32-bit integers][integer], the `function` will accept [floating-point][ieee754] values and represent the values __as if__ they are [unsigned 32-bit integers][integer]. Accordingly, care __should__ be taken to ensure that __only__ nonnegative integer values less than `4,294,967,296` (`2**32`) are provided.
-
 	``` javascript
 	var str = bits( 1 );
 	// returns '00000000000000000000000000000001'
