@@ -66,7 +66,7 @@ var y;
 var b;
 var i;
 
-// Generate random unsigned integers...
+// Generate random unsigned 32-bit integers...
 x = new Uint32Array( 100 );
 for ( i = 0; i < x.length; i++ ) {
 	x[ i ] = round( Math.random()*1e5 );
