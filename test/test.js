@@ -4,7 +4,7 @@
 
 var tape = require( 'tape' );
 var MAX_UINT32 = require( 'const-max-uint32' );
-var bits = require( './../lib' );
+var binaryString = require( './../lib' );
 
 
 // FIXTURES //
@@ -17,7 +17,7 @@ var large = require( './fixtures/large.json' );
 // TESTS //
 
 tape( 'main export is a function', function test( t ) {
-	t.equal( typeof bits, 'function', 'main export is a function' );
+	t.equal( typeof binaryString, 'function', 'main export is a function' );
 	t.end();
 });
 
@@ -26,7 +26,7 @@ tape( 'the function returns a literal 32-bit unsigned integer representation for
 
 	expected = '00000000000000000000000000000000';
 
-	t.equal( bits(0), expected, 'returns bit literal for 0' );
+	t.equal( binaryString(0), expected, 'returns bit literal for 0' );
 	t.end();
 });
 
@@ -35,7 +35,7 @@ tape( 'the function returns a literal 32-bit unsigned integer representation for
 
 	expected = '11111111111111111111111111111111';
 
-	t.equal( bits(MAX_UINT32), expected, 'returns bit literal for MAX_UINT32' );
+	t.equal( binaryString(MAX_UINT32), expected, 'returns bit literal for MAX_UINT32' );
 	t.end();
 });
 
@@ -48,7 +48,7 @@ tape( 'the function returns literal bit representations for unsigned 32-bit inte
 	x = small.x;
 	expected = small.expected;
 	for ( i = 0; i < x.length; i++ ) {
-		str = bits( x[ i ] );
+		str = binaryString( x[ i ] );
 		t.equal( str, expected[ i ], 'returns bit literal for ' + x[ i ] );
 	}
 	t.end();
@@ -63,7 +63,7 @@ tape( 'the function returns literal bit representations for unsigned 32-bit inte
 	x = medium.x;
 	expected = medium.expected;
 	for ( i = 0; i < x.length; i++ ) {
-		str = bits( x[ i ] );
+		str = binaryString( x[ i ] );
 		t.equal( str, expected[ i ], 'returns bit literal for ' + x[ i ] );
 	}
 	t.end();
@@ -78,7 +78,7 @@ tape( 'the function returns literal bit representations for unsigned 32-bit inte
 	x = large.x;
 	expected = large.expected;
 	for ( i = 0; i < x.length; i++ ) {
-		str = bits( x[ i ] );
+		str = binaryString( x[ i ] );
 		t.equal( str, expected[ i ], 'returns bit literal for ' + x[ i ] );
 	}
 	t.end();
@@ -103,7 +103,7 @@ tape( 'the function will accept floating-point values, but will interpret the va
 	];
 
 	for ( i = 0; i < values.length; i++ ) {
-		str = bits( values[i] );
+		str = binaryString( values[i] );
 		t.equal( typeof str, 'string', 'returns a string' );
 		t.equal( str.length, 32, 'returns a string of length 32' );
 	}

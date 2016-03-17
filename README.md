@@ -1,4 +1,4 @@
-Bits
+Binary String
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][build-image]][build-url] [![Coverage Status][coverage-image]][coverage-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -8,30 +8,30 @@ Bits
 ## Installation
 
 ``` bash
-$ npm install math-uint32-bits
+$ npm install math-uint32-binary-string
 ```
 
 
 ## Usage
 
 ``` javascript
-var bits = require( 'math-uint32-bits' );
+var binaryString = require( 'math-uint32-binary-string' );
 ```
 
-#### bits( x )
+#### binaryString( x )
 
 Returns a `string` giving the literal bit representation of an [unsigned 32-bit integer][integer].
 
 ``` javascript
 var a = new Uint32Array( [ 1, 4, 9 ] );
 
-var str = bits( a[0] );
+var str = binaryString( a[0] );
 // returns '00000000000000000000000000000001'
 
-str = bits( a[1] );
+str = binaryString( a[1] );
 // returns '00000000000000000000000000000100'
 
-str = bits( a[2] );
+str = binaryString( a[2] );
 // returns '00000000000000000000000000001001'
 ```
 
@@ -41,16 +41,16 @@ str = bits( a[2] );
 * 	Except for [typed arrays][typed-arrays], JavaScript does __not__ provide native user support for [unsigned 32-bit integers][integer]. According to the [ECMAScript standard][ecma-262], `number` values correspond to [double-precision floating-point numbers][ieee754]. While this `function` is intended for [unsigned 32-bit integers][integer], the `function` will accept [floating-point][ieee754] values and represent the values __as if__ they are [unsigned 32-bit integers][integer]. Accordingly, care __should__ be taken to ensure that __only__ nonnegative integer values less than `4,294,967,296` (`2**32`) are provided.
 
 	``` javascript
-	var str = bits( 1 );
+	var str = binaryString( 1 );
 	// returns '00000000000000000000000000000001'
 
-	str = bits( 4 );
+	str = binaryString( 4 );
 	// returns '00000000000000000000000000000100'
 
-	str = bits( 9 );
+	str = binaryString( 9 );
 	// returns '00000000000000000000000000001001'
 
-	str = bits( 4294967295 );
+	str = binaryString( 4294967295 );
 	// returns '11111111111111111111111111111111'
 	```
 
@@ -59,7 +59,7 @@ str = bits( a[2] );
 
 ``` javascript
 var round = require( 'math-round' );
-var bits = require( 'math-uint32-bits' );
+var binaryString = require( 'math-uint32-binary-string' );
 
 var x;
 var y;
@@ -74,7 +74,7 @@ for ( i = 0; i < x.length; i++ ) {
 
 // Convert unsigned 32-bit integers to literal bit representations...
 for ( i = 0; i < x.length; i++ ) {
-	b = bits( x[i] );
+	b = binaryString( x[i] );
 	y = parseInt( b, 2 );
 	console.log( 'x: %d, b: %s, y: %d', x[i], b, y );
 ```
@@ -143,23 +143,23 @@ $ make view-browser-tests
 Copyright &copy; 2016. The [Compute.io][compute-io] Authors.
 
 
-[npm-image]: http://img.shields.io/npm/v/math-uint32-bits.svg
-[npm-url]: https://npmjs.org/package/math-uint32-bits
+[npm-image]: http://img.shields.io/npm/v/math-uint32-binary-string.svg
+[npm-url]: https://npmjs.org/package/math-uint32-binary-string
 
-[build-image]: http://img.shields.io/travis/math-io/uint32-bits/master.svg
-[build-url]: https://travis-ci.org/math-io/uint32-bits
+[build-image]: http://img.shields.io/travis/math-io/uint32-binary-string/master.svg
+[build-url]: https://travis-ci.org/math-io/uint32-binary-string
 
-[coverage-image]: https://img.shields.io/codecov/c/github/math-io/uint32-bits/master.svg
-[coverage-url]: https://codecov.io/github/math-io/uint32-bits?branch=master
+[coverage-image]: https://img.shields.io/codecov/c/github/math-io/uint32-binary-string/master.svg
+[coverage-url]: https://codecov.io/github/math-io/uint32-binary-string?branch=master
 
-[dependencies-image]: http://img.shields.io/david/math-io/uint32-bits.svg
-[dependencies-url]: https://david-dm.org/math-io/uint32-bits
+[dependencies-image]: http://img.shields.io/david/math-io/uint32-binary-string.svg
+[dependencies-url]: https://david-dm.org/math-io/uint32-binary-string
 
-[dev-dependencies-image]: http://img.shields.io/david/dev/math-io/uint32-bits.svg
-[dev-dependencies-url]: https://david-dm.org/dev/math-io/uint32-bits
+[dev-dependencies-image]: http://img.shields.io/david/dev/math-io/uint32-binary-string.svg
+[dev-dependencies-url]: https://david-dm.org/dev/math-io/uint32-binary-string
 
-[github-issues-image]: http://img.shields.io/github/issues/math-io/uint32-bits.svg
-[github-issues-url]: https://github.com/math-io/uint32-bits/issues
+[github-issues-image]: http://img.shields.io/github/issues/math-io/uint32-binary-string.svg
+[github-issues-url]: https://github.com/math-io/uint32-binary-string/issues
 
 [tape]: https://github.com/substack/tape
 [istanbul]: https://github.com/gotwarlost/istanbul
