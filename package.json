@@ -1,5 +1,5 @@
 {
-  "name": "math-uint32-bits",
+  "name": "math-uint32-binary-string",
   "version": "0.0.0",
   "description": "Returns a string giving the literal bit representation of an unsigned 32-bit integer.",
   "author": {
@@ -10,6 +10,10 @@
     {
       "name": "Athan Reines",
       "email": "kgryte@gmail.com"
+    },
+    {
+      "name": "Philipp Burckhardt",
+      "email": "pburckhardt@outlook.com"
     }
   ],
   "scripts": {
@@ -23,7 +27,7 @@
   "main": "./lib",
   "repository": {
     "type": "git",
-    "url": "git://github.com/math-io/uint32-bits.git"
+    "url": "git://github.com/math-io/uint32-binary-string.git"
   },
   "keywords": [
     "compute.io",
@@ -48,7 +52,7 @@
     "string"
   ],
   "bugs": {
-    "url": "https://github.com/math-io/uint32-bits/issues"
+    "url": "https://github.com/math-io/uint32-binary-string/issues"
   },
   "dependencies": {
     "math-floor": "^1.0.1",

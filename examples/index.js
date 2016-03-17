@@ -1,7 +1,7 @@
 'use strict';
 
 var round = require( 'math-round' );
-var bits = require( './../lib' );
+var binaryString = require( './../lib' );
 
 var x;
 var y;
@@ -16,7 +16,7 @@ for ( i = 0; i < x.length; i++ ) {
 
 // Convert unsigned 32-bit integers to literal bit representations...
 for ( i = 0; i < x.length; i++ ) {
-	b = bits( x[i] );
+	b = binaryString( x[i] );
 	y = parseInt( b, 2 );
 	console.log( 'x: %d, b: %s, y: %d', x[i], b, y );
 }
