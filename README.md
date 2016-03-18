@@ -8,14 +8,14 @@ Binary String
 ## Installation
 
 ``` bash
-$ npm install math-uint32-binary-string
+$ npm install math-uint32-to-binary-string
 ```
 
 
 ## Usage
 
 ``` javascript
-var binaryString = require( 'math-uint32-binary-string' );
+var binaryString = require( 'math-uint32-to-binary-string' );
 ```
 
 #### binaryString( x )
@@ -59,7 +59,7 @@ str = binaryString( a[2] );
 
 ``` javascript
 var round = require( 'math-round' );
-var binaryString = require( 'math-uint32-binary-string' );
+var binaryString = require( 'math-uint32-to-binary-string' );
 
 var x;
 var y;
@@ -143,23 +143,23 @@ $ make view-browser-tests
 Copyright &copy; 2016. The [Compute.io][compute-io] Authors.
 
 
-[npm-image]: http://img.shields.io/npm/v/math-uint32-binary-string.svg
-[npm-url]: https://npmjs.org/package/math-uint32-binary-string
+[npm-image]: http://img.shields.io/npm/v/math-uint32-to-binary-string.svg
+[npm-url]: https://npmjs.org/package/math-uint32-to-binary-string
 
-[build-image]: http://img.shields.io/travis/math-io/uint32-binary-string/master.svg
-[build-url]: https://travis-ci.org/math-io/uint32-binary-string
+[build-image]: http://img.shields.io/travis/math-io/uint32-to-binary-string/master.svg
+[build-url]: https://travis-ci.org/math-io/uint32-to-binary-string
 
-[coverage-image]: https://img.shields.io/codecov/c/github/math-io/uint32-binary-string/master.svg
-[coverage-url]: https://codecov.io/github/math-io/uint32-binary-string?branch=master
+[coverage-image]: https://img.shields.io/codecov/c/github/math-io/uint32-to-binary-string/master.svg
+[coverage-url]: https://codecov.io/github/math-io/uint32-to-binary-string?branch=master
 
-[dependencies-image]: http://img.shields.io/david/math-io/uint32-binary-string.svg
-[dependencies-url]: https://david-dm.org/math-io/uint32-binary-string
+[dependencies-image]: http://img.shields.io/david/math-io/uint32-to-binary-string.svg
+[dependencies-url]: https://david-dm.org/math-io/uint32-to-binary-string
 
-[dev-dependencies-image]: http://img.shields.io/david/dev/math-io/uint32-binary-string.svg
-[dev-dependencies-url]: https://david-dm.org/dev/math-io/uint32-binary-string
+[dev-dependencies-image]: http://img.shields.io/david/dev/math-io/uint32-to-binary-string.svg
+[dev-dependencies-url]: https://david-dm.org/dev/math-io/uint32-to-binary-string
 
-[github-issues-image]: http://img.shields.io/github/issues/math-io/uint32-binary-string.svg
-[github-issues-url]: https://github.com/math-io/uint32-binary-string/issues
+[github-issues-image]: http://img.shields.io/github/issues/math-io/uint32-to-binary-string.svg
+[github-issues-url]: https://github.com/math-io/uint32-to-binary-string/issues
 
 [tape]: https://github.com/substack/tape
 [istanbul]: https://github.com/gotwarlost/istanbul
